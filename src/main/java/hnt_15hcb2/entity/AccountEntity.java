@@ -2,6 +2,7 @@ package hnt_15hcb2.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -13,6 +14,7 @@ import javax.validation.constraints.Size;
 @Table(name = "Account")
 public class AccountEntity {
 
+    @Id
     @NotNull
     @Size(max = 10)
     @Column(name = "UserID", nullable = false)

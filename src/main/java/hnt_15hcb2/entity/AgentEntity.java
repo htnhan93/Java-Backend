@@ -12,6 +12,7 @@ import java.util.Set;
 @Table(name = "Agent")
 public class AgentEntity {
 
+    @Id
     @NotNull
     @Size(max = 10)
     @Column(name = "AgentID")

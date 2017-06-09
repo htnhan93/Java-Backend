@@ -9,6 +9,7 @@ import java.util.Set;
 @Table(name = "MerchantRegion")
 public class MerchantRegionEntity {
 
+    @Id
     @NotNull
     @Size(max = 10)
     @Column(name = "MerchantRegionID", nullable = false)

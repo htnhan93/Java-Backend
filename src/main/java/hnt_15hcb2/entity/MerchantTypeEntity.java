@@ -9,6 +9,7 @@ import java.util.Set;
 @Table(name = "MerchantType")
 public class MerchantTypeEntity {
 
+    @Id
     @NotNull
     @Size(max = 10)
     @Column(name = "MerchantTypeID", nullable = false)

@@ -12,6 +12,7 @@ import java.util.Set;
 @Table(name = "Master")
 public class MasterEntity {
 
+    @Id
     @NotNull
     @Size(max = 10)
     @Column(name = "MasterID", nullable = false)
