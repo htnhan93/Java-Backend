@@ -15,7 +15,7 @@ public class MerchantService implements IMerchantService<MerchantEntity> {
 
     @Override
     public void create(MerchantEntity merchantEntity) throws Exception {
-
+        merchantDAO.create(merchantEntity);
     }
 
     @Override
@@ -25,7 +25,7 @@ public class MerchantService implements IMerchantService<MerchantEntity> {
 
     @Override
     public boolean delete(String id) throws Exception {
-        return false;
+        return merchantDAO.delete(id, MerchantEntity.class);
     }
 
     @Override
