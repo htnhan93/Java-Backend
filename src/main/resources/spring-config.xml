@@ -56,7 +56,7 @@
     <bean id="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="net.sourceforge.jtds.jdbc.Driver"/>
-        <property name="url" value="jdbc:jtds:sqlserver://thanhnhan-pc/SQLEXPRESS;databasename=CardProcessing_HTTT_HNT"/>
+        <property name="url" value="jdbc:jtds:sqlserver://localhost:1433;instance=SQLEXPRESS;databasename=CardProcessing_HTTT_HNT"/>
         <property name="username" value="htnhan93@outlook.com"/>
         <property name="password" value="nhan@24121993"/>
     </bean>
