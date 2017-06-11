@@ -3,6 +3,7 @@ package hnt_15hcb2.entity;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 import org.hibernate.annotations.Type;
+import org.joda.time.LocalDate;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -72,7 +73,7 @@ public class DailyReportEntity {
     @DateTimeFormat(pattern = "dd/MM/yyyy")
     @Column(name = "Date")
     @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentLocalDate")
-    private String Date;
+    private LocalDate Date;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @Fetch(FetchMode.JOIN)
@@ -241,11 +242,11 @@ public class DailyReportEntity {
         NetCount = netCount;
     }
 
-    public String getDate() {
+    public LocalDate getDate() {
         return Date;
     }
 
-    public void setDate(String date) {
+    public void setDate(LocalDate date) {
         Date = date;
     }
 

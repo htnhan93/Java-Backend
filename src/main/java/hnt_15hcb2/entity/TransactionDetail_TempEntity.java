@@ -1,6 +1,7 @@
 package hnt_15hcb2.entity;
 
 import org.hibernate.annotations.Type;
+import org.joda.time.LocalDate;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -58,7 +59,7 @@ public class TransactionDetail_TempEntity {
     @DateTimeFormat(pattern = "dd/MM/yyyy")
     @Column(name = "Date")
     @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentLocalDate")
-    private String Date;
+    private LocalDate Date;
 
     @Column(name = "Complete")
     private  boolean Complete;
@@ -159,11 +160,11 @@ public class TransactionDetail_TempEntity {
         MerchantTypeID = merchantTypeID;
     }
 
-    public String getDate() {
+    public LocalDate getDate() {
         return Date;
     }
 
-    public void setDate(String date) {
+    public void setDate(LocalDate date) {
         Date = date;
     }
 

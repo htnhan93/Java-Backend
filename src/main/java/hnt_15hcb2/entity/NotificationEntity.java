@@ -1,6 +1,7 @@
 package hnt_15hcb2.entity;
 
 import org.hibernate.annotations.Type;
+import org.joda.time.LocalDate;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Column;
@@ -31,7 +32,7 @@ public class NotificationEntity {
     @DateTimeFormat(pattern = "dd/MM/yyyy")
     @Column(name = "Date")
     @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentLocalDate")
-    private String Date;
+    private LocalDate Date;
 
     @Size(max = 10)
     @Column(name = "SenderID")
@@ -68,11 +69,11 @@ public class NotificationEntity {
         Summary = summary;
     }
 
-    public String getDate() {
+    public LocalDate getDate() {
         return Date;
     }
 
-    public void setDate(String date) {
+    public void setDate(LocalDate date) {
         Date = date;
     }
 
