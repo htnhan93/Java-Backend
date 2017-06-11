@@ -55,13 +55,13 @@ public class MerchantEntity {
     @JoinColumn(name = "AgentID")
     private AgentEntity agentEntity;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "MerchantEntity")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "merchantEntity")
     private Set<DailyReportEntity> dailyReportEntity;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "MerchantEntity")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "merchantEntity")
     private Set<MonthlyReportEntity> monthlyReportEntity;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "MerchantEntity")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "merchantEntity")
     private Set<YearlyReportEntity> yearlyReportEntity;
 
     public String getMerchantID() {
