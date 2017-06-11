@@ -63,7 +63,7 @@
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="net.sourceforge.jtds.jdbc.Driver"/>
         <property name="url" value="jdbc:jtds:sqlserver://localhost:1433;instance=SQLEXPRESS;databasename=CardProcessing_HTTT_HNT"/>
-        <property name="username" value=""/>
-        <property name="password" value=""/>
+        <property name="username" value="sa"/>
+        <property name="password" value="123456"/>
     </bean>
 </beans>
