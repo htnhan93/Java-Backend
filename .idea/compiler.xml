@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Java-Backend" />
+        <module name="15hcb2.hnt.backend" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Java-Backend" target="1.7" />
+      <module name="15hcb2.hnt.backend" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
