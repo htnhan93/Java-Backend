@@ -37,11 +37,6 @@ public class AgentEntity {
     @Column(name = "Status")
     private boolean Status;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @Fetch(FetchMode.JOIN)
-    @JoinColumn(name = "MasterID")
-    private MasterEntity masterEntity;
-
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "agentEntity")
     private Set<MerchantEntity> merchantEntity;
 
@@ -91,14 +86,6 @@ public class AgentEntity {
 
     public void setStatus(boolean status) {
         Status = status;
-    }
-
-    public MasterEntity getMasterEntity() {
-        return masterEntity;
-    }
-
-    public void setMasterEntity(MasterEntity masterEntity) {
-        this.masterEntity = masterEntity;
     }
 
     public Set<MerchantEntity> getMerchantEntity() {

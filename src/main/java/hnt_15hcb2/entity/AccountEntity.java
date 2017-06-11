@@ -16,21 +16,18 @@ public class AccountEntity {
 
     @Id
     @NotNull
-    @Size(max = 10)
-    @Column(name = "UserID", nullable = false)
-    private String UserID;
-
-    @NotNull
     @Size(max = 255)
     @Column(name = "Username", nullable = false)
     private String Username;
 
-    @NotNull
     @Size(max = 255)
     @Column(name = "Password", nullable = false)
     private String Password;
 
-    @NotNull
+    @Size(max = 10)
+    @Column(name = "UserID", nullable = false)
+    private String UserID;
+
     @Size(max = 255)
     @Column(name = "Role")
     private String Role;
