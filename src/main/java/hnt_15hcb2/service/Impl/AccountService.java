@@ -7,7 +7,12 @@ import hnt_15hcb2.service.IAccountService;
 import java.util.List;
 
 public class AccountService implements IAccountService<AccountEntity> {
+    public void setAccountDAO(AccountDAOImpl accountDAO) {
+        this.accountDAO = accountDAO;
+    }
+
     private AccountDAOImpl accountDAO;
+
     @Override
     public void create(AccountEntity accountEntity) throws Exception {
 
