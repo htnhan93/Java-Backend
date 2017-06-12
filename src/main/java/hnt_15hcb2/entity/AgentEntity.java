@@ -37,7 +37,8 @@ public class AgentEntity {
     @Column(name = "Status")
     private boolean Status;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "agentEntity")
+    @OneToMany(mappedBy = "agentEntity")
+//    @OneToMany(fetch = FetchType.EAGER, mappedBy = "agentEntity")
     private Set<MerchantEntity> merchantEntity;
 
     public String getAgentID() {

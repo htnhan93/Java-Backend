@@ -37,28 +37,34 @@ public class MerchantEntity {
     @Column(name = "Status")
     private boolean Status;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @Fetch(FetchMode.JOIN)
-    @JoinColumn(name = "MerchantTypeID")
+    @ManyToOne
+//    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+//    @Fetch(FetchMode.JOIN)
+//    @JoinColumn(name = "MerchantTypeID")
     private MerchantTypeEntity merchantTypeEntity;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @Fetch(FetchMode.JOIN)
-    @JoinColumn(name = "MerchantRegionID")
+    @ManyToOne
+//    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+//    @Fetch(FetchMode.JOIN)
+//    @JoinColumn(name = "MerchantRegionID")
     private MerchantRegionEntity merchantRegionEntity;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @Fetch(FetchMode.JOIN)
-    @JoinColumn(name = "AgentID")
+    @ManyToOne
+//    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+//    @Fetch(FetchMode.JOIN)
+//    @JoinColumn(name = "AgentID")
     private AgentEntity agentEntity;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "merchantEntity")
+//    @OneToMany(fetch = FetchType.EAGER, mappedBy = "merchantEntity")
+    @OneToMany(mappedBy = "merchantEntity")
     private Set<DailyReportEntity> dailyReportEntity;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "merchantEntity")
+//    @OneToMany(fetch = FetchType.EAGER, mappedBy = "merchantEntity")
+    @OneToMany(mappedBy = "merchantEntity")
     private Set<MonthlyReportEntity> monthlyReportEntity;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "merchantEntity")
+//    @OneToMany(fetch = FetchType.EAGER, mappedBy = "merchantEntity")
+    @OneToMany(mappedBy = "merchantEntity")
     private Set<YearlyReportEntity> yearlyReportEntity;
 
     public String getMerchantID() {
